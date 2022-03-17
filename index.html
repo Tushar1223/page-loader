@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+       body{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100vh;
+       }
+       #preloader{
+           width: 150px;
+           height: 150px;
+       }
+       #preloader circle {
+           fill: none;
+           stroke-width: 10;
+           stroke-linecap: round;
+       }
+       #preloader circle:nth-child(1){
+           stroke: #ffc114;
+           stroke-dasharray: 50;
+
+       }
+       #preloader circle:nth-child(2){
+           stroke: #ff5248;
+           stroke-dasharray: 100;
+
+       }
+       #preloader circle:nth-child(3){
+           stroke: #19cdca;
+           stroke-dasharray: 180;
+
+       }
+       #preloader circle:nth-child(4){
+           stroke: #4e80e1;
+           stroke-dasharray: 350;
+           stroke-dashoffset: -100;
+       }
+       @keyframes loader{
+           100%{
+               transform: rotate(360deg);
+           }
+       }
+       #preloader circle{
+           animation-name: loader;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: ease-in-out;
+           transform-origin: center center;
+       }
+
+       /* #preloader circle:nth-child(1){
+           animation-delay: -0.2s ;
+       }
+       #preloader circle:nth-child(2){
+           animation-delay: -0.4s;
+       }
+       #preloader circle:nth-child(3){
+        animation-delay: -0.6s ;
+       }
+       #preloader circle:nth-child(4){
+        animation-delay: -0.8s ;   
+       }*/ 
+    </style>
+</head>
+<body>
+  <svg id="preloader">
+      <circle cx="75" cy="75" r="20"/>
+      <circle cx="75" cy="75" r="30"/>
+      <circle cx="75" cy="75" r="50"/>
+      <circle cx="75" cy="75" r="65"/>
+       
+    </svg> 
+</body>
+</html>
